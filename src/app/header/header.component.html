@@ -1,0 +1,42 @@
+<div class="header">
+  <div class="container">
+    <h1>Gif Search</h1>
+    <div class="search-container">
+      <input
+        class="search"
+        type="search"
+        placeholder="What are you looking for?"
+        #gif
+        (keyup.enter)="search(gif.value)"
+      />
+      <div class="dropdown">
+        <button class="btn">Show All <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <button class="icon-btn" type="submit">
+        <i class="fa fa-search" ></i>
+      </button>
+    </div>
+    <h2>You can search any gif with our search</h2>
+    <h5>
+      Everything you need for your creative projects. websites, banners,
+      presentations, magazines and advertising.
+    </h5>
+  </div>
+ 
+    <div class="container1">
+      <div  *ngFor="let gif of gifs">
+        <img [src]="gif.images.downsized.url" alt="Image" />
+
+      </div>
+    </div>
+    
+
+
+ 
+
+
